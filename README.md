@@ -1,47 +1,55 @@
 # Step-in-A-World
 
-> Turn any story canon into a walkable 3D world.
+> Turn a static site into a live, observable world.
 
-Step-in-A-World is a new engine that turns a story world's canon data into a
-first-person, walkable 3D world. Give it a canon package — domain geography, a
-species bestiary, journey routes, field logs — and it generates a world you can walk
-into, where agent-driven creatures live by habitat rules and yesterday's expedition
-changes today's world.
+Step-in-A-World is a new tool framework that turns a static website — pages and
+pre-generated images — into a virtual world you can observe in real time. Instead of
+pre-rendering every view, the framework computes the world live on edge hardware, so
+creatures move, conditions change, and the world keeps happening while you watch.
 
 A new project built for **ASUS UGen AI League 2026** — Creator AI theme ×
-Thunderstorm battlefield × Online track. Proposed in Stage I, developed and showcased
-through Stage II on the organizer-provided VM and SDV environment.
+Lightning battlefield × Online track. Proposed in Stage I, prototyped in Stage II on
+the organizer-provided UGen300 (Hailo-10H) edge device.
 
-## Demo World 01: K's Hunting Log
+## First site brought to life: K's Hunting Log
 
-The first world Step-in-A-World brings to life: NeoBabylon ZERO's hunting log —
-14 domains, weekly expedition journeys, a species bestiary, and field logs. Walk the
-Cloud-Ladder mining corridor (FK-W013): from the cableway frame, past copper-vein
-rock lichen terraces, foldwing katydid grass belts, crystal-back alpaca slopes,
-thunder-tether condor wind windows, to the mist-crest jaguar's forbidden stone steps
-— where the log's own choice, stopping at the boundary line and turning back,
-becomes something you do, not just something you read.
+Today, NeoBabylon ZERO's hunting log is a static site of pre-generated images. It is
+the framework's first demonstration ground — and its journey page is the Stage I
+initial simulation. With the framework, the same Cloud-Ladder mining corridor (FK-W013)
+stops being a set of fixed pictures: species move by habitat rules, conditions shift,
+yesterday's tracks remain, and the mist-crest jaguar's forbidden stone steps mean
+something again — stop at the boundary line and turn back, because the world says so,
+not because the picture says so.
+
+The K site itself is not the submitted work. The framework is.
 
 ## How it works
 
-1. **Canon package in** — domain geography, species bestiary, journey routes, field
-   logs, world state. Format-neutral: any story can fill the same package.
-2. **World model** — terrain, habitats, species, routes, and state, all referenced to
-   canon sources.
-3. **3D scene generation** — terrain, vegetation, species appearance, light and fog,
-   generated from canon data.
-4. **Agent-driven ecology** — creatures act on habitat conditions; outcomes write back
-   to world state instead of being one-off spectacles.
-5. **Verification gates** — canon, asset, routing, and language checks before anything
+1. **Static site in** — pages, pre-generated images, and canon data: domain geography,
+   species bestiary, journey routes, field logs, world state.
+2. **World model** — parsed into terrain, habitats, species, routes, and state, every
+   entry referenced to its source.
+3. **Real-time simulation on edge hardware** — agent behavior and world state computed
+   live on UGen300 (Hailo-10H, 40 TOPS INT4, 8GB), not pre-rendered.
+4. **Live observation** — open the world in a browser and watch it happen. Open a
+   location's field note. Boundary lines have real meaning.
+5. **Persistent state** — yesterday's expedition changes today's world. Tracks remain,
+   routes open or close, and the next observation starts from the updated state.
+6. **Verification gates** — canon, asset, routing, and language checks before anything
    goes live. Expansions are labeled EXPANSION and must fit habitat, ecology chains,
-   and existing canon. The engine never rewrites the author's main story.
-6. **Persistent state** — yesterday's expedition changes today's world. Tracks remain,
-   routes open or close, and the next expedition starts from the updated state.
+   and existing canon. The framework never rewrites the author's main story.
 
-One pipeline, any canon: swap the canon package and a different world comes out.
+One framework, any static site: apply it to another site and that site comes alive too.
+
+## Stage plan
+
+- **Stage I** — proposal + concept architecture + initial simulation (the K journey
+  page, running on an ordinary laptop, as the rules allow).
+- **Stage II** — prototype on the organizer-provided UGen300: hardware integration and
+  performance verification of live world observation on edge hardware.
 
 ## Repository layout
 
 - `docs/PRD.md` — product requirements (Chinese).
-- `engine/` — engine code (planned).
-- `examples/` — demo canon packages (planned; Demo 01: K's Hunting Log).
+- `engine/` — framework code (planned).
+- `examples/` — demo sites (planned; first site: K's Hunting Log).
