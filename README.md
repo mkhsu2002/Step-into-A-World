@@ -23,6 +23,9 @@ not because the picture says so.
 
 The K site itself is not the submitted work. The framework is.
 
+Initial simulation (Stage I): https://k-hunting-log.icareu.tw/journey/ — the current
+static journey page. Stage II will spin its live observation off into a standalone URL.
+
 ## How it works
 
 1. **Static site in** — pages, pre-generated images, and canon data: domain geography,
