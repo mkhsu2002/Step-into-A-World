@@ -3,7 +3,7 @@
 > Turn a static site into a live, observable world.
 
 Step-into-A-World is a new tool framework that turns a static website — pages and
-pre-generated images — into a virtual world you can observe in real time. Instead of
+pre-generated images/videos — into a virtual world you can observe in real time. Instead of
 pre-rendering every view, each observation generates a new video: the framework composes
 a prompt in real time from the domain's data — terrain, species that may appear, climate,
 time — and generates the video from it, so no two visits ever see the same video.
@@ -14,7 +14,7 @@ the organizer-provided UGen300 (Hailo-10H) edge device.
 
 ## First site brought to life: K's Hunting Log
 
-Today, NeoBabylon ZERO's hunting log is a static site of pre-generated images. It is
+Today, NeoBabylon ZERO's hunting log is a static site of pre-generated images and videos. It is
 the framework's first demonstration ground — and its journey page is the Stage I
 initial simulation. With the framework, the same Cloud-Ladder mining corridor (FK-W013)
 stops being one fixed video everyone replays: every visit generates a new video —
@@ -29,17 +29,18 @@ static journey page. Stage II will spin its live observation off into a standalo
 
 ## How it works
 
-1. **Static site in** — pages, pre-generated images, and canon data: domain geography,
+1. **Static site in** — pages, pre-generated images/videos, and canon data: domain geography,
    species bestiary, journey routes, field logs, world state.
-2. **World model** — parsed into terrain, habitats, species, routes, and state, every
+2. **Canon model** — parsed into terrain, habitats, species, routes, and state, every
    entry referenced to its source.
 3. **Per-observation generation** — each visit, the framework composes a prompt in real
    time from domain data and generates a fresh video from it: domain-appropriate creatures
    appear at random, weather and time vary — not a replay of a pre-generated file.
 4. **Live observation** — open the world in a browser and watch it happen. Open a
-   location's field note. Boundary lines have real meaning.
-5. **Persistent state** — yesterday's expedition changes today's world. Tracks remain,
-   routes open or close, and the next observation starts from the updated state.
+   location's field note. Boundary lines are honored in the generated video (stop and turn back).
+5. **Persistent state** — observations write back to state (tracks, route open/close), and
+   the next prompt is composed from domain data + state + variation: state keeps the
+   world continuous, randomness keeps each visit new.
 6. **Verification gates** — canon, asset, routing, and language checks before anything
    goes live. Expansions are labeled EXPANSION and must fit habitat, ecology chains,
    and existing canon. The framework never rewrites the author's main story.
@@ -57,5 +58,5 @@ One framework, any static site: apply it to another site and that site comes ali
 ## Repository layout
 
 - `docs/PRD.md` — product requirements (Chinese).
-- `engine/` — framework code (planned).
+- `framework/` — framework code (planned).
 - `examples/` — demo sites (planned; first site: K's Hunting Log).
