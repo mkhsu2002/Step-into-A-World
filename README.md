@@ -4,9 +4,9 @@
 
 Step-into-A-World is a new tool framework that turns a static website — pages and
 pre-generated images — into a virtual world you can observe in real time. Instead of
-pre-rendering every view, the framework generates a new video on every observation,
-right on edge hardware — creatures appropriate to the domain appear at random, weather
-and time keep changing — so no two visits ever see the same video.
+pre-rendering every view, each observation generates a new video: the framework composes
+a prompt in real time from the domain's data — terrain, species that may appear, climate,
+time — and generates the video from it, so no two visits ever see the same video.
 
 A new project built for **ASUS UGen AI League 2026** — Creator AI theme ×
 Lightning battlefield × Online track. Proposed in Stage I, prototyped in Stage II on
@@ -33,9 +33,9 @@ static journey page. Stage II will spin its live observation off into a standalo
    species bestiary, journey routes, field logs, world state.
 2. **World model** — parsed into terrain, habitats, species, routes, and state, every
    entry referenced to its source.
-3. **Per-observation generation on edge hardware** — each visit generates a fresh video
-   on UGen300 (Hailo-10H, 40 TOPS INT4, 8GB): domain-appropriate creatures appear at
-   random, weather and time vary — not a replay of a pre-generated file.
+3. **Per-observation generation** — each visit, the framework composes a prompt in real
+   time from domain data and generates a fresh video from it: domain-appropriate creatures
+   appear at random, weather and time vary — not a replay of a pre-generated file.
 4. **Live observation** — open the world in a browser and watch it happen. Open a
    location's field note. Boundary lines have real meaning.
 5. **Persistent state** — yesterday's expedition changes today's world. Tracks remain,
@@ -51,7 +51,8 @@ One framework, any static site: apply it to another site and that site comes ali
 - **Stage I** — proposal + concept architecture + initial simulation (the K journey
   page, running on an ordinary laptop, as the rules allow).
 - **Stage II** — prototype on the organizer-provided UGen300: hardware integration and
-  performance verification of live world observation on edge hardware.
+  performance verification of per-observation video generation (exact implementation
+  details to be settled in Stage II).
 
 ## Repository layout
 
